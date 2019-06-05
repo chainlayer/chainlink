@@ -13,7 +13,7 @@ const contract = new web3.eth.Contract(abi, setup.contractAddress, {
   gasLimit: 3000000,
 });
 
-const contractFunction = contract.methods.requestEthereumPrice(setup.oracleAddress, '<jobid>');
+const contractFunction = contract.methods.requestEthereumPrice(setup.oracleAddress, setup.jobid);
 
 const functionAbi = contractFunction.encodeABI();
 
